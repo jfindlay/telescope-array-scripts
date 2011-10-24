@@ -8,7 +8,7 @@ from calib import LEDFlashes
 class MDData:
   def __init__(self):
     self.src_dir = '/tmp/middle_drum/'
-    self.dest_dir = '/home/findlay/data/middle_drum/'
+    self.dest_dir = '/home/findlay/data/middle_drum/' # TODO: move this to /home/findlay/share/middle_drum/data
     self.hal_files = []
     self.led355_files = {}
     self.noise_closed_files = {}

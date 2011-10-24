@@ -273,8 +273,8 @@ class Plot:
 
   def get_Doug_HV_pegs(self,file_name='/home/findlay/data/pegs/MD_Final_HV_Peggings.xls'):
     '''read Doug's spreadsheet'''
-    antixls_command = 'antixls --csv %s' % file_name
-    antixls = Popen(antixls_command,stdout=PIPE,shell=True)
+    antixls_command = ('antixls','--csv',file_name)
+    antixls = Popen(antixls_command,stdout=PIPE)
     HV_pegs_csv = csv.reader(re.split('\n',antixls.stdout.read())[:-1])
     antixls.stdout.close()
     mirror = 0
